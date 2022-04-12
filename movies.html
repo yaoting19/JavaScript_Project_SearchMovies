@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>American Movies</title>
+  <script src="movies.js"></script>
+  <style type = "text/css">
+    h1{
+      text-align: center;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 30px;
+    }
+    h2{
+      text-align: center;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    table{
+      border-collapse:collapse;
+      width:100%;
+      text-align: center;
+      margin-right:10%;
+      margin-top: 1%;
+      margin-bottom: 1%;
+      box-shadow: 0 0 25px rgba(59, 59, 59, 0.404);
+    }
+    thead{
+      border-bottom:2px solid  #17202a;
+      background-color:rgb(154, 243, 255);
+      font-size:23px;
+      color:rgb(0, 0, 0);
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    td{
+      border-bottom:2px solid  #17202a;
+      border-left:2px solid;
+      border-right:2px solid;
+      font-family: sans-serif;
+    }
+    tr:nth-child(even){
+      background-color:rgb(212, 250, 255);
+    }
+    #searchBar {
+      width:18%;
+      position:absolute;
+      right:1%;
+      background-color:floralwhite;
+    }
+    label {
+      font-family:fantasy;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>American Movies</h1>
+  <h2>A database of American movies released since 1900</h2>
+
+  <label for="selectYearStart">Please select a start year: </label>
+  <select id="selectYearStart" onchange = "startYear()"> 
+    <!-- 'onclick' changes once clicking, 'onchange' changes when change options -->
+    <!-- Insert years as options here -->
+  </select>
+  <label for="selectYearEnd">Please select an end year: </label>
+  <select id="selectYearEnd" onchange = "endYear()">
+    <!-- Insert years as options here -->
+  </select>
+  <label for="selectGenre">Please select a genre: </label>
+  <select id="selectGenre" onchange = "selectGenre()">
+    <!-- Insert genres as options here -->
+    <option value="All">All</option>
+    <option value="None">No Genres</option>
+    <option value="Comedy">Comedy</option>
+    <option value="Action">Action</option>
+    <option value="Drama">Drama</option>
+    <option value="Romance">Romance</option>
+    <option value="Teen">Teen</option>
+    <option value="Animated">Animated</option>
+    <option value="Family">Family</option>
+    <option value="Fantasy">Fantasy</option>
+    <option value="Political">Political</option>
+    <option value="Thriller">Thriller</option>
+    <option value="Science Fiction">Science Fiction</option>
+    <option value="Documentary">Documentary</option>
+    <option value="Crime">Crime</option>
+    <option value="Superhero">Superhero</option>
+    <option value="Spy">Spy</option>
+    <option value="Adventure">Adventure</option>
+    <option value="Historical">Historical</option>
+    <option value="Western">Western</option>
+    <option value="Horror">Horror</option>
+    <option value="Supernatural">Supernatural</option>
+    <option value="Dance">Dance</option>
+    <option value="Performance">Performance</option>
+    <option value="Live Action">Live Action</option>
+    <option value="Teen">Teen</option>
+    <option value="Short">Short</option>
+  </select>
+  <button id="search">Search</button>
+  <button id="refresh">Resume</button>
+  <input type ="search" id = "searchBar" placeholder="Search cast names...">
+  <table>
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Title</th>
+        <th>Cast</th>
+        <th>Genres</th>
+      </tr>
+    </thead>
+    <tbody id="movieTable">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody></table>
+
+
+</body></html>
